@@ -1,11 +1,15 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.createMutableEnum = createMutableEnum;
 exports.createEnum = createEnum;
 exports.default = void 0;
+
+var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
 
 /**
  * Creates an array with several notable properties. Given several strings,
@@ -144,9 +148,9 @@ function createMutableEnum() {
 
   obj[Symbol.iterator] =
   /*#__PURE__*/
-  regeneratorRuntime.mark(function _callee() {
+  _regenerator.default.mark(function _callee() {
     var i, key;
-    return regeneratorRuntime.wrap(function _callee$(_context) {
+    return _regenerator.default.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:

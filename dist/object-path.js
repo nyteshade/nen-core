@@ -1,19 +1,19 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = exports.ObjectPath = exports.compress = exports.expand = exports.getVal = void 0;
 
+var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
+
+var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
+
+var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
+
 var _fnOrVal = require("./fnOrVal");
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var ProtoProp = function ProtoProp(self, prop) {
   return self.constructor.prototype[prop];
@@ -96,10 +96,8 @@ function () {
    * value
    */
   function ObjectPath(pathToProp, object) {
-    _classCallCheck(this, ObjectPath);
-
-    _defineProperty(this, "path", void 0);
-
+    (0, _classCallCheck2.default)(this, ObjectPath);
+    (0, _defineProperty2.default)(this, "path", void 0);
     this.path = pathToProp;
 
     if (object) {
@@ -116,7 +114,7 @@ function () {
    */
 
 
-  _createClass(ObjectPath, [{
+  (0, _createClass2.default)(ObjectPath, [{
     key: "get",
     value: function get(object) {
       if (!this.path) {
@@ -328,7 +326,6 @@ function () {
      */
 
   }]);
-
   return ObjectPath;
 }();
 

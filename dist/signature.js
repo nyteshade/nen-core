@@ -9,7 +9,12 @@ if (!Function.prototype.hasOwnProperty('signature')) {
 
       if (source.startsWith('class')) {
         var parts = /constructor\((.*?)\)\s*\{/.exec(source);
-        return "class ".concat(this.name, "(").concat(parts[1], ")");
+
+        if (parts && parts[1]) {
+          return "class ".concat(this.name, "(").concat(parts[1], ")");
+        } else {
+          return "class ".concat(this.name, "()");
+        }
       } // Otherwise, grab everything up to the first opening 
       // curly bracket and call it a day.
 

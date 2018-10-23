@@ -11,7 +11,13 @@ if (!Function.prototype.hasOwnProperty('signature')) {
         // expressions in order to make that happen
         if (source.startsWith('class')) {
           let parts = /constructor\((.*?)\)\s*\{/.exec(source)
-          return `class ${this.name}(${parts[1]})`
+          
+          if (parts && parts[1]) {
+            return `class ${this.name}(${parts[1]})`
+          }
+          else {
+            return `class ${this.name}()`
+          }
         }
 
         // Otherwise, grab everything up to the first opening 

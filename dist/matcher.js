@@ -1,25 +1,23 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = exports.Matcher = exports.Matches = void 0;
+
+var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
+
+var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
+
+var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
 
 var _fnOrVal = require("./fnOrVal");
 
 var _enumeration = require("./enumeration");
 
 var _deepEqual = _interopRequireDefault(require("deep-equal"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 /**
  * A fast function using Object.prototype.toString.[call|apply] in order to
@@ -67,13 +65,9 @@ function () {
    */
   function Matcher(pattern) {
     var matchingBehavior = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : Matches.MATCH_MANY;
-
-    _classCallCheck(this, Matcher);
-
-    _defineProperty(this, "pattern", void 0);
-
-    _defineProperty(this, "prefs", void 0);
-
+    (0, _classCallCheck2.default)(this, Matcher);
+    (0, _defineProperty2.default)(this, "pattern", void 0);
+    (0, _defineProperty2.default)(this, "prefs", void 0);
     this.pattern = pattern;
     this.prefs = matchingBehavior;
   }
@@ -99,7 +93,7 @@ function () {
    */
 
 
-  _createClass(Matcher, [{
+  (0, _createClass2.default)(Matcher, [{
     key: "match",
     value: function match(target) {
       for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
@@ -442,7 +436,6 @@ function () {
      */
 
   }]);
-
   return Matcher;
 }();
 

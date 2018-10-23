@@ -1,9 +1,15 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = exports.Modifier = exports.Operation = void 0;
+
+var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
+
+var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
 
 var _fnOrVal = require("./fnOrVal");
 
@@ -13,12 +19,6 @@ var _enumeration = require("./enumeration");
 
 var _matcher = require("./matcher");
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
 var Operation = (0, _enumeration.createEnum)(['REPLACEMENT', 'Replace the value rather than modify'], ['ADDITION', 'Add the value of the modifier to the target'], ['MULTIPLICATION', 'Multiply the value of the modifier to the target']);
 exports.Operation = Operation;
 
@@ -27,8 +27,7 @@ var Modifier =
 function () {
   function Modifier(desc, amount, matcher, objectPath) {
     var operation = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : Operation.ADDITION;
-
-    _classCallCheck(this, Modifier);
+    (0, _classCallCheck2.default)(this, Modifier);
 
     if (arguments.length === 1 && arguments[0] instanceof Object) {
       Object.assign(this, arguments[0]);
@@ -45,7 +44,7 @@ function () {
     }
   }
 
-  _createClass(Modifier, [{
+  (0, _createClass2.default)(Modifier, [{
     key: "applyTo",
     value: function applyTo(object) {
       var _this = this;
@@ -93,7 +92,6 @@ function () {
       }
     }
   }]);
-
   return Modifier;
 }();
 
