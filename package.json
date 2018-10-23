@@ -58,6 +58,7 @@
     ]
   },
   "dependencies": {
+    "deep-equal": "^1.0.1",
     "weighted-randoms": "^1.0.0"
   }
 }
