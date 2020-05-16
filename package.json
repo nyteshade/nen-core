@@ -60,7 +60,7 @@
     ]
   },
   "dependencies": {
-    "@babel/runtime": "^7.1.2",
+    "@babel/runtime": "^7.9.2",
     "deep-equal": "^1.0.1",
     "weighted-randoms": "^1.0.0"
   }
